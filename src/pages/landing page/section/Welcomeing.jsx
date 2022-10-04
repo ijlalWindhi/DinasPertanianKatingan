@@ -9,6 +9,7 @@ import {
     Heading,
 } from "@chakra-ui/react";
 import ImageSKPD from "../../../assets/images/image-kepalaSKPD.png";
+import { Link } from "react-router-dom";
 
 export default function Welcomeing() {
     return (
@@ -35,15 +36,17 @@ export default function Welcomeing() {
                         Kabupaten Kotawaringin Timur yang dibentuk berdasarkan
                         Undang – Undang No. 05 Tahun 2001.
                     </Text>
-                    <Button
-                        bgColor={"primary.600"}
-                        _hover={{ bgColor: "primary.400" }}
-                        color={"white"}
-                        fontSize={"xl"}
-                        px={14}
-                    >
-                        Selengkapnya
-                    </Button>
+                    <Link to="/profil-daerah/kondisi-umum">
+                        <Button
+                            bgColor={"primary.600"}
+                            _hover={{ bgColor: "primary.400" }}
+                            color={"white"}
+                            fontSize={"xl"}
+                            px={14}
+                        >
+                            Selengkapnya
+                        </Button>
+                    </Link>
                 </GridItem>
                 <GridItem
                     colSpan={1}

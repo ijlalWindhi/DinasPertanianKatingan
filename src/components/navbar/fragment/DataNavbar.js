@@ -109,16 +109,16 @@ const dataNavbar = [
     },
     {
         label: "Galeri",
-        link: "/",
+        link: "/galeri/galeri-foto",
         type: "normal",
         children: [
             {
                 label: "Galeri Foto",
-                href: "/",
+                href: "/galeri/galeri-foto",
             },
             {
                 label: "Galeri Video",
-                href: "/",
+                href: "/galeri/galeri-video",
             },
         ],
     },

@@ -27,17 +27,17 @@ export default function Galeri() {
                 py={8}
             >
                 <Box w={"32%"}>
-                    <Link to="/">
+                    <Link to="/galeri/galeri-foto">
                         <Image src={Image3} w={"100%"} />
                     </Link>
                 </Box>
                 <Box w={"32%"}>
-                    <Link to="/">
+                    <Link to="/galeri/galeri-foto">
                         <Image src={Image1} w={"100%"} />
                     </Link>
                 </Box>
                 <Box w={"32%"}>
-                    <Link to="/">
+                    <Link to="/galeri/galeri-foto">
                         <Image src={Image2} w={"100%"} />
                     </Link>
                 </Box>

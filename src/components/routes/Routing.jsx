@@ -12,6 +12,8 @@ import Renstra from "../../pages/program/renstra/Renstra";
 import RKT from "../../pages/program/rkt/RKT";
 import LaporanKeuangan from "../../pages/program/laporan keuangan/LaporanKeuangan";
 import LaporanKinerja from "../../pages/program/laporan kinerja/LaporanKinerja";
+import GaleriFoto from "../../pages/galeri/galeri foto/GaleriFoto";
+import GaleriVideo from "../../pages/galeri/galeri video/GaleriVideo";
 
 export default function Routing() {
     return (
@@ -41,6 +43,8 @@ export default function Routing() {
                 path="/program/laporan-kinerja"
                 element={<LaporanKinerja />}
             />
+            <Route path="/galeri/galeri-foto" element={<GaleriFoto />} />
+            <Route path="/galeri/galeri-video" element={<GaleriVideo />} />
         </Routes>
     );
 }

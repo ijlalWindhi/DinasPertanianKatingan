@@ -24,6 +24,7 @@ export default function Caraousel() {
             }}
             modules={[Pagination, Autoplay]}
             className="mySwiper"
+            id="caraousel"
         >
             <SwiperSlide>
                 <Box>
