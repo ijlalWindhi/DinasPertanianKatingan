@@ -3,7 +3,7 @@ import { Globe, Mail, Phone } from "react-feather";
 const dataNavbar = [
     {
         label: "Profil Daerah",
-        link: "/",
+        link: "/profil-daerah/kondisi-umum",
         type: "normal",
         children: [
             {
@@ -22,51 +22,51 @@ const dataNavbar = [
     },
     {
         label: "Profil",
-        link: "/",
+        link: "/profil/profil-dinas",
         type: "normal",
         children: [
             {
                 label: "Profil Dinas Pertanian, Pangan, dan Perikanan Kabupaten Katingan",
-                href: "/",
+                href: "/profil/profil-dinas",
             },
             {
                 label: "Visi dan Misi",
-                href: `/`,
+                href: `/profil/visi-misi`,
             },
             {
                 label: "Struktur Organisasi",
-                href: `/`,
+                href: `/profil/struktur-organisasi`,
             },
             {
                 label: "Sambutan Kepala Dinas",
-                href: `/`,
+                href: `/profil/sambutan`,
             },
             {
                 label: "Tupoksi",
-                href: `/`,
+                href: `/profil/tupoksi`,
             },
         ],
     },
     {
         label: "Program",
-        link: "/",
+        link: "/program/renstra",
         type: "normal",
         children: [
             {
                 label: "RENSTRA",
-                href: "/",
+                href: "/program/renstra",
             },
             {
                 label: "RKT",
-                href: "/",
+                href: "/program/dokumen-rkt",
             },
             {
                 label: "Dokumen Anggaran dan Laporan Keuangan",
-                href: `/`,
+                href: `/program/laporan-keuangan`,
             },
             {
                 label: "Laporan Kinerja SKPD",
-                href: `/`,
+                href: `/program/laporan-kinerja`,
             },
         ],
     },
