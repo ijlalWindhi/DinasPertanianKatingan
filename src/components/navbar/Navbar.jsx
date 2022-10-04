@@ -5,18 +5,17 @@ import {
     HStack,
     IconButton,
     useDisclosure,
-    useColorModeValue,
     Text,
-    Stack,
     Popover,
     PopoverTrigger,
     PopoverContent,
     Icon,
-    Collapse,
+    Image,
 } from "@chakra-ui/react";
 import { AlignCenter, X, ChevronUp, ChevronDown, Home } from "react-feather";
 import { Link } from "react-router-dom";
 import { dataNavbar } from "./fragment/DataNavbar";
+import Logo from "../../assets/images/logo.png";
 
 export default function Navbar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -28,7 +27,7 @@ export default function Navbar() {
             px={[4, 20]}
             py={2}
             zIndex={10}
-            // boxShadow={"1px 5px 24px -12px rgba(0, 0, 0, 0.3);"}
+            boxShadow={"1px 5px 24px -12px rgba(0, 0, 0, 0.3);"}
             position={"fixed"}
         >
             <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
@@ -40,7 +39,8 @@ export default function Navbar() {
                     display={{ md: "none" }}
                     onClick={isOpen ? onClose : onOpen}
                 />
-                <HStack spacing={8} alignItems={"center"}>
+                <HStack spacing={2} alignItems={"center"}>
+                    <Image src={Logo} w={10} />
                     <Flex flexDir={"column"}>
                         <Text
                             fontWeight={800}
@@ -159,13 +159,37 @@ export default function Navbar() {
                                         }
                                         borderRadius={"md"}
                                         border={"none"}
-                                        p={2}
+                                        py={4}
+                                        px={2}
                                         maxWidth={"md"}
                                         overflow={"auto"}
                                         fontSize={"sm"}
                                         fontWeight={"normal"}
                                     >
-                                        <Text p={2} fontWeight={"semibold"}>
+                                        <Box
+                                            display={"flex"}
+                                            alignItems={"center"}
+                                        >
+                                            <Image src={Logo} w={10} />
+                                            <Flex
+                                                flexDir={"column"}
+                                                fontWeight={800}
+                                                ml={2}
+                                            >
+                                                <Text fontSize={"sm"}>
+                                                    Dinas Pertanian, Pangan &
+                                                    Perikanan
+                                                </Text>
+                                                <Text fontSize={"md"}>
+                                                    Kabupaten Katingan
+                                                </Text>
+                                            </Flex>
+                                        </Box>
+                                        <Text
+                                            fontWeight={"semibold"}
+                                            fontSize={"xl"}
+                                            mt={6}
+                                        >
                                             Kontak Kami
                                         </Text>
                                         {item.children.map((item, index) => {
