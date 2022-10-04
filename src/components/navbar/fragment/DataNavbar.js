@@ -8,14 +8,15 @@ const dataNavbar = [
         children: [
             {
                 label: "Kondisi Umum Daerah",
-                href: "/",
+                href: "/profil-daerah/kondisi-umum",
             },
             {
                 label: "Topografi",
-                href: "/",
+                href: "/profil-daerah/topografi",
             },
             {
                 label: "Potensi Pertanian, Pertenakan, dan Perkebunan",
+                href: "/profil-daerah/potensi",
             },
         ],
     },
