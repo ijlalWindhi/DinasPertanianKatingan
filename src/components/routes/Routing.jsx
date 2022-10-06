@@ -14,6 +14,13 @@ import LaporanKeuangan from "../../pages/program/laporan keuangan/LaporanKeuanga
 import LaporanKinerja from "../../pages/program/laporan kinerja/LaporanKinerja";
 import GaleriFoto from "../../pages/galeri/galeri foto/GaleriFoto";
 import GaleriVideo from "../../pages/galeri/galeri video/GaleriVideo";
+import Berita1 from "../../pages/publikasi/berita/Berita1";
+import Berita2 from "../../pages/publikasi/berita/Berita2";
+import Berita3 from "../../pages/publikasi/berita/Berita3";
+import Pengumuman from "../../pages/publikasi/pengumuman/Pengumuman";
+import PagePengumuman from "../../pages/publikasi/pengumuman/pages/PengumumanPage";
+import Agenda from "../../pages/agenda/Agenda";
+import PageAgenda from "../../pages/agenda/pages/AgendaPage";
 
 export default function Routing() {
     return (
@@ -45,6 +52,25 @@ export default function Routing() {
             />
             <Route path="/galeri/galeri-foto" element={<GaleriFoto />} />
             <Route path="/galeri/galeri-video" element={<GaleriVideo />} />
+            <Route
+                path="/publikasi/berita/nomenklator-pertanian-baru"
+                element={<Berita1 />}
+            />
+            <Route
+                path="/publikasi/berita/penyerahan-bantuan-alsintan-oleh-bupati-katingan-kepada-petani"
+                element={<Berita2 />}
+            />
+            <Route
+                path="/publikasi/berita/tanam-padi-perdana-di-areal-cetak-sawah-kabupaten-katingan-tahun-2016"
+                element={<Berita3 />}
+            />
+            <Route path="/publikasi/pengumuman" element={<Pengumuman />} />
+            <Route
+                path="/publikasi/pengumuman/pengumuman-1"
+                element={<PagePengumuman />}
+            />
+            <Route path="/agenda" element={<Agenda />} />
+            <Route path="/agenda/agenda-1" element={<PageAgenda />} />
         </Routes>
     );
 }

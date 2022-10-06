@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Heading, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 export default function Pengumuman() {
     return (
@@ -16,9 +17,16 @@ export default function Pengumuman() {
                 </Text>
             </Box>
             <Box bgColor={"primary.400"} mt={10}>
-                <Text fontSize={"2xl"} fontWeight={"semibold"} py={4}>
-                    RENCANA PEMBANGUNAN JALAN DI DESA...
-                </Text>
+                <Link to="/publikasi/pengumuman">
+                    <Text
+                        _hover={{ color: "gray.300" }}
+                        fontSize={"2xl"}
+                        fontWeight={"semibold"}
+                        py={4}
+                    >
+                        RENCANA PEMBANGUNAN JALAN DI DESA...
+                    </Text>
+                </Link>
             </Box>
         </Box>
     );

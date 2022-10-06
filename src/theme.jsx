@@ -15,6 +15,9 @@ const theme = extendTheme({
             600: "#0B7274",
             700: "#3C8E90",
         },
+        secondary: {
+            100: "#9DC7C7",
+        },
     },
 });
 

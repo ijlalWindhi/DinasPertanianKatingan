@@ -16,7 +16,7 @@ export default function CardAgenda() {
             my={2}
         >
             <Heading fontSize={"3xl"}>Rapat Desa Dalam Rangka HUT RI</Heading>
-            <Link to="/">
+            <Link to="/agenda">
                 <Text>Lihat Selengkapnya</Text>
             </Link>
         </Box>

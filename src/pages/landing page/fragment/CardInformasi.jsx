@@ -54,7 +54,7 @@ export default function CardInformasi() {
                                 <Text ml={1}>oleh Admin</Text>
                             </Box>
                         </Box>
-                        <Link to="/">
+                        <Link to="/publikasi/berita/nomenklator-pertanian-baru">
                             <Button
                                 bgColor={"primary.400"}
                                 _hover={{ bgColor: "primary.200" }}
@@ -112,7 +112,7 @@ export default function CardInformasi() {
                                 <Text ml={1}>oleh Admin</Text>
                             </Box>
                         </Box>
-                        <Link to="/">
+                        <Link to="/publikasi/berita/penyerahan-bantuan-alsintan-oleh-bupati-katingan-kepada-petani">
                             <Button
                                 bgColor={"primary.400"}
                                 _hover={{ bgColor: "primary.200" }}
@@ -170,7 +170,7 @@ export default function CardInformasi() {
                                 <Text ml={1}>oleh Admin</Text>
                             </Box>
                         </Box>
-                        <Link to="/">
+                        <Link to="/publikasi/berita/tanam-padi-perdana-di-areal-cetak-sawah-kabupaten-katingan-tahun-2016">
                             <Button
                                 bgColor={"primary.400"}
                                 _hover={{ bgColor: "primary.200" }}

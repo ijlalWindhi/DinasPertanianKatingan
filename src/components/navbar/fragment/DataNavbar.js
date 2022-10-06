@@ -94,16 +94,16 @@ const dataNavbar = [
     },
     {
         label: "Publikasi",
-        link: "/",
+        link: "/publikasi/berita/nomenklator-pertanian-baru",
         type: "normal",
         children: [
             {
                 label: "Berita",
-                href: "/",
+                href: "/publikasi/berita/nomenklator-pertanian-baru",
             },
             {
                 label: "Pengumuman",
-                href: "/",
+                href: "/publikasi/pengumuman",
             },
         ],
     },
@@ -124,7 +124,7 @@ const dataNavbar = [
     },
     {
         label: "Kontak Kami",
-        link: "/",
+        link: "",
         type: "icon",
         children: [
             {
