@@ -8,6 +8,7 @@ import {
     GridItem,
     Flex,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import DiagramLine from "../fragment/DiagramLine";
 import DiagramBar from "../fragment/DiagramBar";
 import CardAgenda from "../fragment/CardAgenda";
@@ -27,16 +28,18 @@ export default function DataStatistik() {
                         <Text fontSize={"xl"}>
                             Pertanian, Pangan, & Perikanan
                         </Text>
-                        <Button
-                            bgColor={"primary.100"}
-                            _hover={{ bgColor: "primary.200" }}
-                            color={"white"}
-                            fontSize={"xl"}
-                            px={8}
-                            mt={6}
-                        >
-                            Lihat Selengkapnya
-                        </Button>
+                        <Link to={"/basis-data/statistik/tanaman-pangan"}>
+                            <Button
+                                bgColor={"primary.100"}
+                                _hover={{ bgColor: "primary.200" }}
+                                color={"white"}
+                                fontSize={"xl"}
+                                px={8}
+                                mt={6}
+                            >
+                                Lihat Selengkapnya
+                            </Button>
+                        </Link>
                     </Box>
                     <Box>
                         <DiagramLine />
@@ -55,16 +58,18 @@ export default function DataStatistik() {
                         <Text fontSize={"xl"}>
                             Pertanian, Pangan, & Perikanan
                         </Text>
-                        <Button
-                            bgColor={"primary.100"}
-                            _hover={{ bgColor: "primary.200" }}
-                            color={"white"}
-                            fontSize={"xl"}
-                            px={8}
-                            mt={6}
-                        >
-                            Lihat Selengkapnya
-                        </Button>
+                        <Link to={"/basis-data/harga-komoditi"}>
+                            <Button
+                                bgColor={"primary.100"}
+                                _hover={{ bgColor: "primary.200" }}
+                                color={"white"}
+                                fontSize={"xl"}
+                                px={8}
+                                mt={6}
+                            >
+                                Lihat Selengkapnya
+                            </Button>
+                        </Link>
                     </Box>
                     <Box>
                         <DiagramBar />

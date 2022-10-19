@@ -21,6 +21,12 @@ import Pengumuman from "../../pages/publikasi/pengumuman/Pengumuman";
 import PagePengumuman from "../../pages/publikasi/pengumuman/pages/PengumumanPage";
 import Agenda from "../../pages/agenda/Agenda";
 import PageAgenda from "../../pages/agenda/pages/AgendaPage";
+import Download from "../../pages/basis data/download/Download";
+import TanamanPangan from "../../pages/basis data/statistik/tanaman pangan/TanamanPangan";
+import Peternakan from "../../pages/basis data/statistik/peternakan/Peternakan";
+import Perkebunan from "../../pages/basis data/statistik/perkebunan/Perkebunan";
+import TanamanHoltikultura from "../../pages/basis data/statistik/tanaman holtikultura/TanamanHoltikultura";
+import HargaKomoditi from "../../pages/basis data/harga komoditi/HargaKomoditi";
 
 export default function Routing() {
     return (
@@ -71,6 +77,27 @@ export default function Routing() {
             />
             <Route path="/agenda" element={<Agenda />} />
             <Route path="/agenda/agenda-1" element={<PageAgenda />} />
+            <Route path="/basis-data/download" element={<Download />} />
+            <Route
+                path="/basis-data/statistik/tanaman-pangan"
+                element={<TanamanPangan />}
+            />
+            <Route
+                path="/basis-data/statistik/peternakan"
+                element={<Peternakan />}
+            />
+            <Route
+                path="/basis-data/statistik/perkebunan"
+                element={<Perkebunan />}
+            />
+            <Route
+                path="/basis-data/statistik/tanaman-holtikultura"
+                element={<TanamanHoltikultura />}
+            />
+            <Route
+                path="/basis-data/harga-komoditi"
+                element={<HargaKomoditi />}
+            />
         </Routes>
     );
 }

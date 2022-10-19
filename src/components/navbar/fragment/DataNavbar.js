@@ -72,12 +72,12 @@ const dataNavbar = [
     },
     {
         label: "Basis Data",
-        link: "/",
+        link: "/basis-data/statistik/tanaman-pangan",
         type: "normal",
         children: [
             {
                 label: "Statistik Pertanian, Perkebunan, dan Peternakan",
-                href: "/",
+                href: "/basis-data/statistik/tanaman-pangan",
             },
             {
                 label: "Komoditi Pertanian, Perkebunan, dan Peternakan",
@@ -85,10 +85,11 @@ const dataNavbar = [
             },
             {
                 label: "Download",
-                href: `/`,
+                href: `/basis-data/download`,
             },
             {
                 label: "Harga Komoditi Dinas Pertanian, Pangan, dan Perikanan",
+                href: `/basis-data/harga-komoditi`,
             },
         ],
     },
