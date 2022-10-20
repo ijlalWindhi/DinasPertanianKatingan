@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../../components/navbar/Navbar";
 import Footer from "../../../components/footer/Footer";
 import HeadingSection from "../../../components/heading/HeadingSection";
@@ -14,9 +14,16 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { ChevronDown } from "react-feather";
-import { data } from "./DataKomoditi";
+import DetailKomoditi from "./DetailKomoditi";
 
 export default function Komoditi() {
+  const [visible, setVisible] = useState(true);
+  const [subsektor, setSubsektor] = useState("-");
+  const [level, setLevel] = useState("-");
+  const [kecamatan, setKecamatan] = useState("-");
+  const [kelurahan, setKelurahan] = useState("-");
+  const [tahun, setTahun] = useState("-");
+
   return (
     <Box minH={"100vh"}>
       <Navbar />
@@ -24,181 +31,248 @@ export default function Komoditi() {
         heading="Basis Data"
         title="Komoditi Pertanian, Perkebunan, dan Peternakan"
       />
-      <Box px={28} py={32} bgColor={"primary.500"}>
-        <Heading pb={10}>
-          Komoditi Pertanian, Perkebunan, dan Peternakan
-        </Heading>
-        <Box display={"flex"} justifyContent={"space-between"} maxW={"50%"}>
-          <Box display={"flex"} flexDir={"column"} gap={10}>
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"space-between"}
-            >
-              <Text mr={10} fontSize={"2xl"} fontWeight={"bold"}>
-                Subsektor :
-              </Text>
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  rightIcon={<ChevronDown />}
-                  bgColor={"gray.300"}
-                  w={48}
-                  textAlign={"left"}
-                >
-                  Pilih Subsektor
-                </MenuButton>
-                <MenuList>
-                  <MenuItem>Semua Subsektor</MenuItem>
-                  <MenuItem>Tanaman Pangan</MenuItem>
-                  <MenuItem>Holtikultura</MenuItem>
-                  <MenuItem>Perkebunan</MenuItem>
-                  <MenuItem>Peternakan</MenuItem>
-                </MenuList>
-              </Menu>
+      {visible ? (
+        <Box px={28} py={32} bgColor={"primary.500"}>
+          <Heading pb={10}>
+            Komoditi Pertanian, Perkebunan, dan Peternakan
+          </Heading>
+          <Box display={"flex"} justifyContent={"space-between"} maxW={"60%"}>
+            <Box display={"flex"} flexDir={"column"} gap={10}>
+              <Box
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"space-between"}
+              >
+                <Text mr={10} fontSize={"2xl"} fontWeight={"bold"}>
+                  Subsektor :
+                </Text>
+                <Menu>
+                  <MenuButton
+                    as={Button}
+                    rightIcon={<ChevronDown />}
+                    bgColor={"gray.300"}
+                    w={72}
+                    textAlign={"left"}
+                  >
+                    {subsektor}
+                  </MenuButton>
+                  <MenuList>
+                    <MenuItem onClick={() => setSubsektor("semua subsektor")}>
+                      Semua Subsektor
+                    </MenuItem>
+                    <MenuItem onClick={() => setSubsektor("tanaman pangan")}>
+                      Tanaman Pangan
+                    </MenuItem>
+                    <MenuItem onClick={() => setSubsektor("holtikultura")}>
+                      Holtikultura
+                    </MenuItem>
+                    <MenuItem onClick={() => setSubsektor("perkebunan")}>
+                      Perkebunan
+                    </MenuItem>
+                    <MenuItem onClick={() => setSubsektor("peternakan")}>
+                      Peternakan
+                    </MenuItem>
+                  </MenuList>
+                </Menu>
+              </Box>
+              <Box
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"space-between"}
+              >
+                <Text mr={10} fontSize={"2xl"} fontWeight={"bold"}>
+                  Level :
+                </Text>
+                <Menu>
+                  <MenuButton
+                    as={Button}
+                    rightIcon={<ChevronDown />}
+                    bgColor={"gray.300"}
+                    w={72}
+                    textAlign={"left"}
+                  >
+                    {level}
+                  </MenuButton>
+                  <MenuList>
+                    <MenuItem onClick={() => setLevel("semua level")}>
+                      Semua Level
+                    </MenuItem>
+                    <MenuItem onClick={() => setLevel("kecamatan")}>
+                      Kecamatan
+                    </MenuItem>
+                    <MenuItem onClick={() => setLevel("kelurahan")}>
+                      Kelurahan
+                    </MenuItem>
+                  </MenuList>
+                </Menu>
+              </Box>
+              <Box
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"space-between"}
+              >
+                <Text mr={10} fontSize={"2xl"} fontWeight={"bold"}>
+                  Kecamatan :
+                </Text>
+                <Menu>
+                  <MenuButton
+                    as={Button}
+                    rightIcon={<ChevronDown />}
+                    bgColor={"gray.300"}
+                    w={72}
+                    textAlign={"left"}
+                  >
+                    {kecamatan}
+                  </MenuButton>
+                  <MenuList>
+                    <MenuItem onClick={() => setKecamatan("Semua Kecamatan")}>
+                      Semua Kecamatan
+                    </MenuItem>
+                    <MenuItem onClick={() => setKecamatan("Bukit Raya")}>
+                      Bukit Raya
+                    </MenuItem>
+                    <MenuItem onClick={() => setKecamatan("Kamimpang")}>
+                      Kamimpang
+                    </MenuItem>
+                    <MenuItem onClick={() => setKecamatan("Katingan Hilir")}>
+                      Katingan Hilir
+                    </MenuItem>
+                    <MenuItem onClick={() => setKecamatan("Katingan Hulu")}>
+                      Katingan Hulu
+                    </MenuItem>
+                    <MenuItem onClick={() => setKecamatan("Katingan Kuala")}>
+                      Katingan Kuala
+                    </MenuItem>
+                    <MenuItem onClick={() => setKecamatan("Katingan Tengah")}>
+                      Katingan Tengah
+                    </MenuItem>
+                    <MenuItem onClick={() => setKecamatan("Marikit")}>
+                      Marikit
+                    </MenuItem>
+                    <MenuItem onClick={() => setKecamatan("Mendawai")}>
+                      Mendawai
+                    </MenuItem>
+                    <MenuItem onClick={() => setKecamatan("Petak Malai")}>
+                      Petak Malai
+                    </MenuItem>
+                    <MenuItem onClick={() => setKecamatan("Pulau Malan")}>
+                      Pulau Malan
+                    </MenuItem>
+                    <MenuItem onClick={() => setKecamatan("Senaman Mantikei")}>
+                      Senaman Mantikei
+                    </MenuItem>
+                    <MenuItem onClick={() => setKecamatan("Tasik Payawan")}>
+                      Tasik Payawan
+                    </MenuItem>
+                    <MenuItem
+                      onClick={() => setKecamatan("Tewang Sangalang Garing")}
+                    >
+                      Tewang Sangalang Garing
+                    </MenuItem>
+                  </MenuList>
+                </Menu>
+              </Box>
+              <Box
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"space-between"}
+              >
+                <Text mr={10} fontSize={"2xl"} fontWeight={"bold"}>
+                  Kelurahan :
+                </Text>
+                <Menu>
+                  <MenuButton
+                    as={Button}
+                    rightIcon={<ChevronDown />}
+                    bgColor={"gray.300"}
+                    w={72}
+                    textAlign={"left"}
+                  >
+                    {kelurahan}
+                  </MenuButton>
+                  <MenuList>
+                    <MenuItem onClick={() => setKelurahan("semua kelurahan")}>
+                      Semua Kelurahan
+                    </MenuItem>
+                    <MenuItem onClick={() => setKelurahan("kosongan baru")}>
+                      Kasongan Baru
+                    </MenuItem>
+                    <MenuItem onClick={() => setKelurahan("kosongan lama")}>
+                      Kasongan Lama
+                    </MenuItem>
+                    <MenuItem
+                      onClick={() => setKelurahan("Tumbang Sanamang I")}
+                    >
+                      Tumbang Sanamang I
+                    </MenuItem>
+                    <MenuItem onClick={() => setKelurahan("Pagatan Hilir")}>
+                      Pagatan Hilir
+                    </MenuItem>
+                    <MenuItem onClick={() => setKelurahan("Pagatan Hulu")}>
+                      Pagatan Hulu
+                    </MenuItem>
+                    <MenuItem onClick={() => setKelurahan("Samba Kahayan")}>
+                      Samba Kahayan
+                    </MenuItem>
+                    <MenuItem onClick={() => setKelurahan("Pendahara")}>
+                      Pendahara
+                    </MenuItem>
+                  </MenuList>
+                </Menu>
+              </Box>
+              <Button
+                color={"white"}
+                bgColor={"primary.600"}
+                _hover={{ bgColor: "primary.200" }}
+                w={32}
+                onClick={() => setVisible(!visible)}
+              >
+                Tampilkan
+              </Button>
             </Box>
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"space-between"}
-            >
-              <Text mr={10} fontSize={"2xl"} fontWeight={"bold"}>
-                Level :
-              </Text>
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  rightIcon={<ChevronDown />}
-                  bgColor={"gray.300"}
-                  w={48}
-                  textAlign={"left"}
-                >
-                  Pilih Level
-                </MenuButton>
-                <MenuList>
-                  <MenuItem>Semua Level</MenuItem>
-                  <MenuItem>Kecamatan</MenuItem>
-                  <MenuItem>Kelurahan</MenuItem>
-                </MenuList>
-              </Menu>
-            </Box>
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"space-between"}
-            >
-              <Text mr={10} fontSize={"2xl"} fontWeight={"bold"}>
-                Kecamatan :
-              </Text>
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  rightIcon={<ChevronDown />}
-                  bgColor={"gray.300"}
-                  w={48}
-                  textAlign={"left"}
-                >
-                  Pilih Kecamatan
-                </MenuButton>
-                <MenuList>
-                  <MenuItem>Semua Kecamatan</MenuItem>
-                  <MenuItem>Bukit Raya</MenuItem>
-                  <MenuItem>Kamimpang</MenuItem>
-                  <MenuItem>Katingan Hilir</MenuItem>
-                  <MenuItem>Katingan Hulu</MenuItem>
-                  <MenuItem>Katingan Kuala</MenuItem>
-                  <MenuItem>Katingan Tengah</MenuItem>
-                  <MenuItem>Marikit</MenuItem>
-                  <MenuItem>Mendawai</MenuItem>
-                  <MenuItem>Petak Malai</MenuItem>
-                  <MenuItem>Pulau Malan</MenuItem>
-                  <MenuItem>Senaman Mantikei</MenuItem>
-                  <MenuItem>Tasik Payawan</MenuItem>
-                  <MenuItem>Tewang Sangalang Garing</MenuItem>
-                </MenuList>
-              </Menu>
-            </Box>
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"space-between"}
-            >
-              <Text mr={10} fontSize={"2xl"} fontWeight={"bold"}>
-                Kelurahan :
-              </Text>
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  rightIcon={<ChevronDown />}
-                  bgColor={"gray.300"}
-                  w={48}
-                  textAlign={"left"}
-                >
-                  Pilih Kelurahan
-                </MenuButton>
-                <MenuList>
-                  <MenuItem>Semua Kelurahan</MenuItem>
-                  <MenuItem>Kasongan Baru</MenuItem>
-                  <MenuItem>Kasongan Lama</MenuItem>
-                  <MenuItem>Tumbang Sanamang I</MenuItem>
-                  <MenuItem>Pagatan Hilir</MenuItem>
-                  <MenuItem>Pagatan Hulu</MenuItem>
-                  <MenuItem>Samba Kahayan</MenuItem>
-                  <MenuItem>Pendahara</MenuItem>
-                </MenuList>
-              </Menu>
-            </Box>
-            <Button
-              color={"white"}
-              bgColor={"primary.600"}
-              _hover={{ bgColor: "primary.200" }}
-              w={32}
-            >
-              Tampilkan
-            </Button>
-          </Box>
-          <Box>
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"space-between"}
-            >
-              <Text mr={10} fontSize={"2xl"} fontWeight={"bold"}>
-                Tahun :
-              </Text>
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  rightIcon={<ChevronDown />}
-                  bgColor={"gray.300"}
-                  w={48}
-                  textAlign={"left"}
-                >
-                  Pilih Tahun
-                </MenuButton>
-                <MenuList>
-                  <MenuItem>Semua Tahun</MenuItem>
-                  <MenuItem>2014</MenuItem>
-                  <MenuItem>2015</MenuItem>
-                  <MenuItem>2016</MenuItem>
-                </MenuList>
-              </Menu>
+            <Box>
+              <Box
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"space-between"}
+              >
+                <Text mr={10} fontSize={"2xl"} fontWeight={"bold"}>
+                  Tahun :
+                </Text>
+                <Menu>
+                  <MenuButton
+                    as={Button}
+                    rightIcon={<ChevronDown />}
+                    bgColor={"gray.300"}
+                    w={72}
+                    textAlign={"left"}
+                  >
+                    {tahun}
+                  </MenuButton>
+                  <MenuList>
+                    <MenuItem onClick={() => setTahun("semua tahun")}>
+                      Semua Tahun
+                    </MenuItem>
+                    <MenuItem onClick={() => setTahun("2014")}>2014</MenuItem>
+                    <MenuItem onClick={() => setTahun("2015")}>2015</MenuItem>
+                    <MenuItem onClick={() => setTahun("2016")}>2016</MenuItem>
+                  </MenuList>
+                </Menu>
+              </Box>
             </Box>
           </Box>
         </Box>
-      </Box>
-      <Box>
-        {data.map((item) => (
-          <Box>
-            <Text>{item.subsektor}</Text>
-            <Text>{item.level}</Text>
-            <Text>{item.kecamatan}</Text>
-            <Text>{item.tahun}</Text>
-            <Text>{item.nama}</Text>
-            <Image src={item.gambar} />
-          </Box>
-        ))}
-      </Box>
+      ) : (
+        <DetailKomoditi
+          subsektor={subsektor}
+          tahun={tahun}
+          level={level}
+          kecamatan={kecamatan}
+          kelurahan={kelurahan}
+          setVisible={setVisible}
+        />
+      )}
+
       <Footer />
     </Box>
   );

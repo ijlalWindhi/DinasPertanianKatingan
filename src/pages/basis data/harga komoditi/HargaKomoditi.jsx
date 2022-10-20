@@ -174,19 +174,6 @@ export default function HargaKomoditi() {
               }
 
               return null;
-              // if (index == data.length - 1) {
-              //     return (
-              //         <Text
-              //             fontSize={"xl"}
-              //             fontWeight={"bold"}
-              //             color={"primary.100"}
-              //         >
-              //             Data tidak ditemukan
-              //         </Text>
-              //     );
-              // } else {
-              //     return null;
-              // }
             })}
           </Box>
         </GridItem>
