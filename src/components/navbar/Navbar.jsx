@@ -44,14 +44,14 @@ export default function Navbar() {
                     <Flex flexDir={"column"}>
                         <Text
                             fontWeight={800}
-                            fontSize={"md"}
+                            fontSize={"sm"}
                             color="primary.100"
                         >
                             Dinas Pertanian, Pangan & Perikanan
                         </Text>
                         <Text
                             fontWeight={800}
-                            fontSize={"xl"}
+                            fontSize={"sm"}
                             color="primary.600"
                         >
                             Kabupaten Katingan
@@ -62,7 +62,7 @@ export default function Navbar() {
                     as={"nav"}
                     spacing={10}
                     fontWeight={"semibold"}
-                    fontSize={"md"}
+                    fontSize={"sm"}
                     textColor={"gray.500"}
                     display={{ base: "none", md: "flex" }}
                 >
@@ -180,14 +180,14 @@ export default function Navbar() {
                                                     Dinas Pertanian, Pangan &
                                                     Perikanan
                                                 </Text>
-                                                <Text fontSize={"md"}>
+                                                <Text fontSize={"sm"}>
                                                     Kabupaten Katingan
                                                 </Text>
                                             </Flex>
                                         </Box>
                                         <Text
                                             fontWeight={"semibold"}
-                                            fontSize={"xl"}
+                                            fontSize={"sm"}
                                             mt={6}
                                         >
                                             Kontak Kami
